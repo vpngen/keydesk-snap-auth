@@ -90,7 +90,7 @@ if [ "$1" = "pkg" ]; then
 
         for keyfile in /etc/__vpngen__/keydesk-snap-realm_*.pub; do
                 key=$(cat "${keyfile}")
-                sed "s|{{key}}|${key}|g" < "keydesk-snap-auth/debpkg/src/keydesk_snap_realms.tpl" >> keydesk_snap_realms
+                sed "s|{{key}}|${key}|g" < "keydesk-snap-auth/debpkg/src/keydesk_snap_realms.tpl" >> keydesk_snap_realms_keys
         done
 
         go install github.com/goreleaser/nfpm/v2/cmd/nfpm@latest
