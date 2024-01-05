@@ -27,7 +27,7 @@ contents:
     mode: 0444
     owner: root
     group: root
-- src: keydesk_snap_authorities_keys
+- src: /data/src/keydesk_snap_authorities_keys
   dst: /etc/vg-keydesk-snap/keydesk_snap_authorities_keys
   file_info:
     mode: 0444
