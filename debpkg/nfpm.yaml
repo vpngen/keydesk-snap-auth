@@ -1,0 +1,41 @@
+name: "vgkeydesk-snap-authorities"
+arch: "all"
+platform: "linux"
+version: ${PACKAGE_VERSION}
+section: "default"
+priority: "optional"
+release: ${PACKAGE_RELEASE}
+
+provides:
+- vgkeydesk-snap-authorities
+
+maintainer: "Ingmund Ollson <ingmund@proton.me>"
+description: VPNGen keydesk snap encription keys
+vendor: "VPNGen"
+homepage: "http://vpngen.org"
+
+contents:
+- dst: /etc/vg-keydesk-snap
+  type: dir
+  file_info:
+    mode: 0111
+    owner: root
+    group: root
+- src: keydesk-snap-realms
+  dst: /etc/vg-keydesk-snap/keydesk-snap-realms
+  file_info:
+    mode: 0444
+    owner: root
+    group: root
+- src: keydesk-snap-authorities
+  dst: /etc/vg-keydesk-snap/keydesk-snap-authorities
+  file_info:
+    mode: 0444
+    owner: root
+    group: root
+deb:
+  compression: xz
+  breaks:
+  - vgkeydesk-all (<< 1.0.0)
+  - vgkeydesk (<< 1.0.0) 
+
