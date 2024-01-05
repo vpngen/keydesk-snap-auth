@@ -22,13 +22,13 @@ contents:
     owner: root
     group: root
 - src: keydesk_snap_realms_keys
-  dst: /etc/vg-keydesk-snap/keydesk_snap_realms_keys
+  dst: /etc/vg-keydesk-snap/realms_keys
   file_info:
     mode: 0444
     owner: root
     group: root
 - src: /etc/__vpngen__/keydesk_snap_authorities_keys
-  dst: /etc/vg-keydesk-snap/keydesk_snap_authorities_keys
+  dst: /etc/vg-keydesk-snap/authorities_keys
   file_info:
     mode: 0444
     owner: root
